@@ -1,0 +1,68 @@
+.Copyright-Txt {
+    background-color: #e2e6ea;
+    text-align: right;
+    font-size: 11px;
+    color: #4f4c4c;
+    height: 30px;
+    padding-right: 945px;
+    border-bottom: 1px solid #fff;
+}
+
+.footer{
+	 position: fixed;
+	 bottom:0;
+	padding-top: 7px;
+	
+}
+.header {
+
+    font-size: 14px;
+	font-family: Tahoma, Arial, sans-serif;
+    color: #ec008a;
+}
+
+.header-Heading {
+	
+    font-size: 40px;
+    color: #585657;
+    font-family: gothem,arial,verdana;
+	font-weight: bold;
+}
+ .panel-Heading{
+	
+	font-size: 16px;
+    color: #585657;
+    font-family: gothem,arial,verdana;
+	font-weight: bold; 
+ }
+ .Footer-Strip {
+    line-height: 0px;
+    background-color: #B9C0C8;
+	 padding-right: 1144px;
+	  position: fixed;
+	 bottom:0;
+	padding-top: 3px;
+}
+
+
+.modal-header
+{
+    background:#dc2f8d;
+    color:white;
+}
+.btn-default
+{
+    background:#dc2f8d;
+    color:white;
+	border-color: #ccc;
+}
+.btn-info{
+	color: #fff;
+    background-color: #dc2f8d;
+    border-color: #dc2f8d;
+}
+.btn-info:focus {
+    color: #fff;
+    background-color: #dc2f8d;
+    border-color: #dc2f8d;
+}
