@@ -23,12 +23,12 @@ DROP TABLE IF EXISTS `sprint`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sprint` (
-  `Sprint_ID` int(11) NOT NULL,
-  `Sprint_Name` varchar(45) NOT NULL,
+  `Sprint_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Sprint_No` varchar(45) NOT NULL,
   `Start_Date` datetime DEFAULT NULL,
   `End_Date` datetime DEFAULT NULL,
   PRIMARY KEY (`Sprint_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,7 @@ CREATE TABLE `sprint` (
 
 LOCK TABLES `sprint` WRITE;
 /*!40000 ALTER TABLE `sprint` DISABLE KEYS */;
+INSERT INTO `sprint` VALUES (1,'1',NULL,NULL),(2,'2','0000-00-00 00:00:00','0000-00-00 00:00:00'),(3,'3','0000-00-00 00:00:00','0000-00-00 00:00:00'),(4,'4',NULL,NULL),(5,'5',NULL,NULL),(6,'6',NULL,NULL),(7,'7',NULL,NULL),(8,'8',NULL,NULL),(9,'9',NULL,NULL),(10,'10',NULL,NULL),(11,'11',NULL,NULL),(12,'12',NULL,NULL),(13,'13',NULL,NULL),(14,'14',NULL,NULL),(15,'15',NULL,NULL);
 /*!40000 ALTER TABLE `sprint` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-04 18:04:52
+-- Dump completed on 2018-05-11 16:23:35

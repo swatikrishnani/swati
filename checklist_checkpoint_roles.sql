@@ -24,13 +24,12 @@ DROP TABLE IF EXISTS `checkpoint_roles`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `checkpoint_roles` (
   `CPR_ID` int(11) NOT NULL,
-  `RoleId` int(11) DEFAULT NULL,
+  `Role_ID` int(11) DEFAULT NULL,
   `Checkpoint_ID` int(11) DEFAULT NULL,
   PRIMARY KEY (`CPR_ID`),
   KEY `Checkpoint_ID_idx` (`Checkpoint_ID`),
-  KEY `RoleID_idx` (`RoleId`),
-  CONSTRAINT `Checkpoint_ID` FOREIGN KEY (`Checkpoint_ID`) REFERENCES `checkpoints` (`CheckPoint_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `RoleID` FOREIGN KEY (`RoleId`) REFERENCES `role` (`RoleID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `RoleID_idx` (`Role_ID`),
+  CONSTRAINT `RoleID` FOREIGN KEY (`Role_ID`) REFERENCES `role` (`Role_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,6 +39,7 @@ CREATE TABLE `checkpoint_roles` (
 
 LOCK TABLES `checkpoint_roles` WRITE;
 /*!40000 ALTER TABLE `checkpoint_roles` DISABLE KEYS */;
+INSERT INTO `checkpoint_roles` VALUES (1,2,1);
 /*!40000 ALTER TABLE `checkpoint_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-04 18:04:52
+-- Dump completed on 2018-05-11 16:23:35

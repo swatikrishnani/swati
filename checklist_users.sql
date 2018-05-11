@@ -32,7 +32,7 @@ CREATE TABLE `users` (
   PRIMARY KEY (`User_ID`),
   KEY `Role_ID_idx` (`Role_ID`),
   KEY `Emp_ID_idx` (`Employee_ID`),
-  CONSTRAINT `Role_ID` FOREIGN KEY (`Role_ID`) REFERENCES `role` (`RoleID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `Role_ID` FOREIGN KEY (`Role_ID`) REFERENCES `role` (`Role_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -42,7 +42,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('swati','swatik',1,'swati',10032614,1),('swatikrishnani','swati',2,'swati',10032615,1);
+INSERT INTO `users` VALUES ('litika','litika',1,'litika',10032510,1),('litikak','litika',2,'litika',10032617,1),('litikakakkar','litika',5,'litika',10032617,1),('swati','swatik',4,'swati',10032614,1),('swatii','swatik',5,'swati',10032614,1),('swatikr','swati',3,'swati',10032615,1),('swatikrishnani','swatik',6,'swati',10032614,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-04 17:42:58
+-- Dump completed on 2018-05-11 16:23:35

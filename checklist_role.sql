@@ -23,9 +23,9 @@ DROP TABLE IF EXISTS `role`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `role` (
-  `RoleID` int(11) NOT NULL,
+  `Role_ID` int(11) NOT NULL,
   `Role_Description` varchar(45) NOT NULL,
-  PRIMARY KEY (`RoleID`)
+  PRIMARY KEY (`Role_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -35,7 +35,7 @@ CREATE TABLE `role` (
 
 LOCK TABLES `role` WRITE;
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` VALUES (1,'ROLE_TESTER'),(2,'ROLE_DEVELOPER');
+INSERT INTO `role` VALUES (1,'ROLE_SCRUMMASTER'),(2,'ROLE_DEVELOPER'),(3,'ROLE_BA'),(4,'ROLE_TESTER_FAT'),(5,'ROLE_TESTER_CI'),(6,'ROLE_TESTER_INTEGRATION');
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-04 18:04:51
+-- Dump completed on 2018-05-11 16:23:35
