@@ -25,15 +25,15 @@ DROP TABLE IF EXISTS `checklist_transactions`;
 CREATE TABLE `checklist_transactions` (
   `Transaction_ID` int(11) NOT NULL AUTO_INCREMENT,
   `Sprint_ID` int(11) NOT NULL,
-  `Employee_ID` int(11) NOT NULL,
-  `CLR_ID` int(11) NOT NULL,
+  `Role_ID` int(11) NOT NULL,
+  `CheckPoint_ID` int(11) NOT NULL,
   PRIMARY KEY (`Transaction_ID`),
   KEY `Sprint_ID_idx` (`Sprint_ID`),
-  KEY `CLR_ID_idx` (`CLR_ID`),
-  KEY `Emp_ID_idx` (`Employee_ID`),
-  CONSTRAINT `CLR_ID` FOREIGN KEY (`CLR_ID`) REFERENCES `checkpoint_roles` (`CPR_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `Emp_ID` FOREIGN KEY (`Employee_ID`) REFERENCES `users` (`Employee_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `Sprint_ID` FOREIGN KEY (`Sprint_ID`) REFERENCES `sprint` (`Sprint_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `Role_ID_idx` (`Role_ID`),
+  KEY `CheckPoint_ID_idx` (`CheckPoint_ID`),
+  CONSTRAINT `CheckPointID` FOREIGN KEY (`CheckPoint_ID`) REFERENCES `checkpoints` (`CheckPoint_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `RolesID` FOREIGN KEY (`Role_ID`) REFERENCES `role` (`Role_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `SprintID` FOREIGN KEY (`Sprint_ID`) REFERENCES `sprint` (`Sprint_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-05-04 18:04:52
+-- Dump completed on 2018-05-14 17:36:26
